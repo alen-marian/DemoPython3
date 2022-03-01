@@ -1,0 +1,24 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body style="background-color:Gainsboro;">
+
+<h1 style="text-align:center;">Login Page</h1>
+
+<form style="background-color:coral;padding:50px; text-align:center;" action="login" method="post">
+  {% csrf_token%}
+  <input type="text" name="username" placeholder="Username"><br>
+ <br> <input type="password" name="password" placeholder="Enter your password"><br>
+  <br> <input type="submit" name="login">
+</form>
+
+    {% for msg in  messages %}
+          <h2>{{msg}}</h2>
+    {% endfor %}
+</body>
+</html>
